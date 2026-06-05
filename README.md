@@ -12,12 +12,22 @@ projects with a complete, known-good VSCode toolchain:
 
 ## Quick-start a new project from the template
 
+This repo is **private**, so use the template by its local path (clone the repo
+first on a new machine):
+
 ```powershell
-stack new <project-name> https://raw.githubusercontent.com/byth3p0und/tk-mime/main/templates/budget-haskell.hsfiles
+stack new <project-name> <path-to-this-repo>\templates\budget-haskell.hsfiles
 cd <project-name>
 stack build
 code .
 ```
+
+On the original machine that path is
+`C:\Code\versioned\GitHub\byth3p0und\tk-mime\templates\budget-haskell.hsfiles`.
+
+> To use the `stack new <raw-github-url>` one-liner instead, make this repo
+> public; the URL would then be
+> `https://raw.githubusercontent.com/byth3p0und/tk-mime/main/templates/budget-haskell.hsfiles`.
 
 The generated project ships with a pinned `stack.yaml` and
 `.vscode/{settings,launch,tasks}.json`, so HLS + hlint work on open and **F5**
