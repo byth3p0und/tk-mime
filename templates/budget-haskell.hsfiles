@@ -140,7 +140,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     "haskell.serverExecutablePath": "C:\\ghcup\\bin\\haskell-language-server-wrapper.exe",
 
     // brittany is no longer bundled with modern HLS (no GHC 9.10 support).
-    "haskell.formattingProvider": "fourmolu"
+    "haskell.formattingProvider": "fourmolu",
+
+    // HLS's semantic-tokens plugin is OFF by default; enable it for type-aware
+    // highlighting and to stop "No plugins are available ... semanticTokens is
+    // disabled globally" errors when the editor requests semantic tokens.
+    "haskell.plugin.semanticTokens.globalOn": true
 }
 {-# START_FILE .vscode/launch.json #-}
 {
