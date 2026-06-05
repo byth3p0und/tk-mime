@@ -1,0 +1,12 @@
+{
+    // Let the ghcup wrapper resolve the project's GHC and launch the matching
+    // server. Project is on GHC 9.8.4 (stack LTS 23.28), so the wrapper runs
+    // haskell-language-server-9.8.4.exe (HLS 2.14.0.0), which ships the hlint
+    // plugin (hlint-3.8) -> hlint diagnostics + code actions work natively.
+    // NB: the GHC 9.10.3 / HLS 2.14 build omits hlint, which is why we avoid it.
+    "haskell.manageHLS": "PATH",
+    "haskell.serverExecutablePath": "C:\\ghcup\\bin\\haskell-language-server-wrapper.exe",
+
+    // brittany is no longer bundled with modern HLS (no GHC 9.10 support).
+    "haskell.formattingProvider": "fourmolu"
+}

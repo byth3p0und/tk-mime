@@ -1,0 +1,5 @@
+.stack-work/
+*~
+.vscode/phoityne.log
+.claude/
+*.cabal

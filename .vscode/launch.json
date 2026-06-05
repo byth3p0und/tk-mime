@@ -1,0 +1,28 @@
+{
+    // Haskell debugging via phoityne-vscode + haskell-debug-adapter (DAP).
+    // Requires the exes on PATH: haskell-dap, ghci-dap, haskell-debug-adapter
+    // (installed via: stack install --resolver lts-23.28 haskell-dap ghci-dap haskell-debug-adapter).
+    // The debugger drives `stack ghci` using ghci-dap as the interactive GHC.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "ghc",
+            "request": "launch",
+            "name": "Debug tk-mime-exe",
+            "internalConsoleOptions": "openOnSessionStart",
+            "workspace": "${workspaceFolder}",
+            "startup": "${workspaceFolder}/app/Main.hs",
+            "startupFunc": "",
+            "startupArgs": "",
+            "stopOnEntry": false,
+            "mainArgs": "",
+            "ghciPrompt": "H>>= ",
+            "ghciInitialPrompt": "ghci> ",
+            "ghciCmd": "stack ghci --no-load --no-build --main-is tk-mime:exe:tk-mime-exe",
+            "ghciEnv": {},
+            "logFile": "${workspaceFolder}/.vscode/phoityne.log",
+            "logLevel": "WARNING",
+            "forceInspect": false
+        }
+    ]
+}
